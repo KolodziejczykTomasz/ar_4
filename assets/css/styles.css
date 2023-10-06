@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+*,
+*::before,
+*::after {
+    padding: 0 0;
+    margin: 0 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+p {margin-bottom: 0;}
+button {border: none;}
+:root {font-size: 62.5%;}
+
+html {
+    font-size: 62.5%; 
+    font-family: 'Prata', serif;
+    font-family: 'Poppins', sans-serif; 
+    font-style: normal;
+    line-height: normal;
+}
+
+body { 
+    border-left: 2px solid red;
+    border-right: 2px solid red;  
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {    
+    height: 1080px;
+    width: 1920px;    
+    background-image: url("../img/hero/Rectangle\ 1.svg");
+    background-position: right;
+}
+
+nav {
+    width: 1420px;
+    height: 26px;
+    margin: 20px auto 0 auto;
+    border: 2px solid red;
+}
+
+.header-content {   
+    width: 1070px; 
+    height: 1080px;
+    z-index: 9999;
+    padding-left: 250px;
+    background-color: #FFF8EB;
+}
+
+.header-title {
+    color: #000;
+    font-family: Prata;
+    font-size: 6.4rem;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 1.28px;
+    text-transform: uppercase;
+    padding-top: 324px;
+    width: 797px;
+    margin-right: 25px;
+}
+
+.header-subtitle {
+    width: 652px;
+    margin-top: 20px;
+    color: #000;
+    font-family: Poppins;
+    font-size: 2rem;  
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.4px;
+    text-transform: capitalize;
+}
+
+.header-search {
+    margin-top: 60px;
+    width: 1060px;
+    height: 100px; 
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
