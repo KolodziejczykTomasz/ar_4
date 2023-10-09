@@ -33,22 +33,71 @@ body {
 }
 
 header {    
-    height: 1080px;
-    width: 1920px;    
+    min-height: 1080px;
+    height: auto;
+    max-width: 1920px; 
+    width: auto;  
     background-image: url("../img/hero/Rectangle\ 1.svg");
-    background-position: right;
+    background-position: right;  
+    position: relative;  
 }
 
 nav {
-    width: 1420px;
-    height: 26px;
-    margin: 20px auto 0 auto;
-    border: 2px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1420px;
+    width: 100%;
+    min-height: 26px;
+    height: auto;
+    margin-top: 20px;  
+    position: absolute;
+    top: 0;  
+    left: 50%;  
+    transform: translate(-50%, -50%);  
+}
+
+.nav-brand {
+    margin-top: 20px;
+}
+
+.nav-lang {
+    color: #000;
+    font-family: Poppins;
+    font-size: 1.6rem;  
+    font-weight: 400;   
+    height: 24px;  
+}
+
+.nav-lang__drop {
+    margin: 9px 12px 9px 9px;
+}
+
+.nav-title {
+    color: #000;
+    font-family: Prata;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 2.4px;
+    text-transform: uppercase; 
+}
+
+.nav-subtitle {
+    color: #000;
+    font-family: Poppins;
+    font-size: .3rem;   
+    font-weight: 400;
+    letter-spacing: 4.665px;
+    text-transform: uppercase;
+    text-align: center;
+    
 }
 
 .header-content {   
-    width: 1070px; 
-    height: 1080px;
+    max-width: 1070px; 
+    width: 100%;
+    min-height: 1080px;
+    height: auto;
     z-index: 9999;
     padding-left: 250px;
     background-color: #FFF8EB;
@@ -63,12 +112,16 @@ nav {
     letter-spacing: 1.28px;
     text-transform: uppercase;
     padding-top: 324px;
-    width: 797px;
-    margin-right: 25px;
+    max-width: 797px;
+    width: 100%;
+    height: auto;
+    margin-right: 25px;    
 }
 
 .header-subtitle {
-    width: 652px;
+    max-width: 652px;
+    width: 100%;
+    height: auto;
     margin-top: 20px;
     color: #000;
     font-family: Poppins;
@@ -80,9 +133,315 @@ nav {
 }
 
 .header-search {
+    display: flex;
+    align-items: center;
     margin-top: 60px;
-    width: 1060px;
-    height: 100px; 
+    width: 1060px; 
+    min-height: 100px; 
+    height: auto;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+}
+
+.header-search-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid red;
+    min-height: 80px;
+    height: auto;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+
+.header-search-guests,
+.header-search-checkin,
+.header-search-checkout {
+    display: flex;
+    flex-direction: row;
+    margin-left: 28px;
+
+}
+
+.header-search-checkin {
+    margin-left: 30px;
+}
+
+.header-search__icon {
+    margin-left: 59px;   
+}
+
+.header-search-guests__childs,
+.header-search-guests__guests {
+    display: flex;
+    flex-direction: row;
+}
+
+.header-search-icon__date,
+.header-search-guests__guests__icon__down {
+     align-self: flex-end;
+}
+
+.header-search-icon__down {
+    margin-left: 10px;
+}
+
+.header-search-guests__childs {
+    margin-left: 20px;
+    align-self: flex-end;
+}
+
+.header-search__title {
+    color: #000;
+    font-family: Poppins;
+    font-size: 14px;   
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+}
+
+.header-search__subtitle  {
+    color: #000;
+    font-family: Poppins;
+    font-size: 14px; 
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.28px;
+    text-transform: capitalize;
+}
+
+.header-search__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-search__btn button {
+    width: 260px;
+    height: 50px; 
+    background: #EEC78C;
+    color: #000;
+    font-family: Poppins;
+    font-size: 1.4rem;    
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.28px;
+    text-transform: capitalize; 
+    margin: 25px 46px;
+}
+
+@media screen and (max-width:1360px) {
+    header { 
+        background-image: none;
+    }
+    .header-content {        
+        padding-left: 0;
+        text-align: center; 
+        margin: 0 auto;       
+    }
+    .header-title {
+        width: 100%;
+        padding-top: 224px;
+        word-wrap: break-word;
+        margin: 0 auto 70px auto; 
+        font-size: 6.4em;  
+    }    
+    .header-subtitle {
+        width: 100%;
+        margin: 70px auto 70px auto;
+    }
+    .header-search {
+        width: 95%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .header-search-guests,
+    .header-search-checkin,
+    .header-search-checkout {
+       width: 33%;        
+        display: flex;  
+        margin-left: 0;    
+        flex-direction: column;
+        border: 1px solid blue;
+    }
+    .header-search__btn{
+        margin: auto auto;  
+    }
+    .header-search-wrapper {
+        justify-content: center;
+    }
+    .header-search-guests__guests, 
+    .header-search-guests__childs,
+    .header-search-guests {
+        border: 2px solid brown;
+        flex-direction: row;           
+        justify-items: center;     
+    }
+    .header-search-guests__guests__quantity,
+    .header-search-guests, 
+    .header-search-guests__childs{
+        flex-direction: column;
+        justify-items: center;
+        margin: 0 auto;
+        
+    }
+    .header-search-guests__guests {
+        width: auto;
+    }
+
+    .header-search-guests__childs {
+        flex-direction: row;
+    }
+
+    .header-search__icon  {      
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width: 678px) {
+    .header-search-guests,
+    .header-search-checkin,
+    .header-search-checkout {
+       width: 100%;  
+    } 
+}
+
+#welcome {
+    padding: 150px 257px 150px 250px;
+    border: 2px solid royalblue;
+    font-family: Poppins;
+    font-weight: 400;
+    height: auto;
+    width: 100%;
+
+}
+
+.welcome-wrapper { 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 54px;   
+    max-width: 1413px;
+    width: auto;
+    min-height: 645px; 
+    height: auto;
+    margin: 0 auto;
+    border: 2px solid red;
+}
+
+.welcome-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border: 2px solid green;
+    max-width: 700px;
+    width: auto;
+    height: auto;
+}
+
+.welcome-content__title{
+    margin-top: 76px; 
+    font-size: 1.4rem;
+    letter-spacing: 7px;
+    text-transform: capitalize;
+}
+
+.welcome-content__subtitle { 
+    font-family: Prata;
+    font-size: 3.4rem; 
+    line-height: 150%;
+    word-wrap: break-word;
+    letter-spacing: 1.28px;
+    text-transform: capitalize;
+    max-width: 700px;
+    width: auto;
+    height: auto;
+}
+
+.welcome-content__desc {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    max-width: 700px;
+    width: auto;
+    min-height: 147px;   
+    height: auto;
+    font-size: 1.4rem;
+    line-height: 150%;
+    letter-spacing: 0.28px;
+    text-transform: capitalize;
+}
+
+.welcome-content__contact {
+    display: flex;
+    gap: 15px;
+}
+
+.welcome-content__contact-name { 
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 150%;
+    text-transform: capitalize; 
+}
+
+.welcome-content__contact-phone { 
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 0.4px;
+    text-transform: capitalize;
+}
+
+.welcome-content__contact-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-img {
+    position: relative;
+    width: 683px;
+    height: 645px;
+    border: 2px solid orange;
+}
+
+.welcome-img__right {
+    position: absolute;
+    background-image: url('../img/welcome/Rectangle\ 6_top.svg');   
+    top: 0;
+    right: 0;
+    width: 450px;
+    height: 500px;  
+}
+
+.welcome-img__left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 450px;
+    height: 500px;
+    z-index: 9999;
+    background-image: url('../img/welcome/Rectangle\ 5_bottom.svg');
+}
+
+@media screen and (min-width: 1666px) {
+    .welcome-wrapper {         
+        flex-wrap: nowrap;
+    }
+}
+
+@media screen and (max-width: 1665px) {
+    .welcome-content, 
+    .welcome-img {
+        width: 100%;
+    }
+    #welcome {
+        padding: 0 0;
+    }
 }
